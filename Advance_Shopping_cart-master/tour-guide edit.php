@@ -1,6 +1,5 @@
 <?php
-require_once('./php/component1.php');
-
+ require_once('./php/component1.php');
 ?>
 
 <!doctype html>
@@ -365,9 +364,370 @@ require_once('./php/component1.php');
             <div class="guide-page-section">
                <div class="container">
                	<div class="row">
-               		<?php 
-                     component1();
-                     ?>
+               		     
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$90 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 2.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Nadun Costa</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Nadun Costa is young travel guide with 5year experience. He is interesting adventure and trekking travel guiding. He speak Hindi and English languages well.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$110 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 3.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Sameera Liyanage</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Sameera Liyanage is best tour guide and tour planner with 8year experience and valuable tourism degree. He speaking English and Russian languages.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$90 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 4.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Sanka Siribaddha</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Sanka Siribaddha is 18year experience travel guide. He is interesting with up-side travelling. He is flurent in English and very friendly.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$90 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 5.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Channa Peries</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Channa Peries is one of best travel guide with 15years experience. He is flurent in English and He is interesting down-side travelling with beach travelling experiences.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$150 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 6.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Mihira Samaradheera</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Mihira Samaradheera is young travel guide with 11year experience. He has well experience in surfing, fishing and diving. He speaks English very well.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$120 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 7.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Anura Athukorala</h3>
+               					<h5>Tour Guide</h5>
+               					<p>Anura Athukorala is one of best adventure tour guide in Sri Lanka with 19year experience. He is flurent in English. He also speaks japan language.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$100 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 8.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Sanjeewa Mendis</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Sanjeewa Mendis is wonderful travel guide and travel planner with 18year experience. He is flurent in English. He interests central, Sri Lanka travellings.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$90 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 9.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Chanaka Fonseka</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Chanaka Fonseka is travel guide, bird specialist and ecologist with 15year experience. He loves to travel forests and national parks very much. He is flurent in English.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$130 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 10.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Harry Samarage</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Harry Samarage is travel guide with 10years experience. He had work experience as a cook for 5 years, So He is very interesting foods in Sri Lanka.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$90 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 11.jpg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Jude Gamage</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Jude Gamage is young travel guide with 6year experience. He loves Adventures, Camping and Trekking. He can speak English ang German languages well.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
+               		<div class="col-lg-4 col-md-6">
+                        <div class="package-wrap">
+                           <div class="package-price">
+                              <h6>
+                                 <span>$120 </span> / per day
+                              </h6>
+                           </div>
+                        </div>
+               			<div class="guide-content-wrap text-center">
+               				<figure class="guide-image">
+               					<img src="assets/images/TG 12.jpeg" alt="">
+               				</figure>
+               				<div class="guide-content">
+               					<h3>Sandy Fonseka</h3>
+               					<h5>Travel Guide</h5>
+               					<p>Sandy Fonseka is one of the best female travel guide in Sri Lanka with 3year experience. She is speaking Russian, German, Turkey and English very well.</p>
+               					<div class="guide-social social-links">
+               						<ul>
+		                              <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+		                              <li><a href="#"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
+		                           </ul>
+               					</div>
+                              <br>
+                              <div class="form-group submit-btn ">
+                                 <a href="#" class="button-primary ">Book Now</a>
+                              </div>
+
+               				</div>
+               			</div>
+               		</div>
                	</div>
                </div>
             </div>
