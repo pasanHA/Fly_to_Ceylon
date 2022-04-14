@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fly to Ceylon</title>
+    <link rel="shortcut icon" type="x-icon" href="favicon.png">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" media="all">
+    <!-- jquery-ui css -->
+    <link rel="stylesheet" type="text/css" href="assets/vendors/jquery-ui/jquery-ui.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+
+
+
+
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+
+<body>
+    
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <a href="#" class="logo"><span>FLY</span> to ceylon</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#gallery">gallery</a>
+
+        <a href="#offers">offers</a>
+
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+
+
+
+
+<!-- login form container  -->
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="authontication.php" onsubmit = "return validation()" method="post">
+        <h3Register</h3>
+        Enter your email:
+        <input type="email" class="box" placeholder="enter your email" name="email">
+        Enter your password:
+        <input type="password" class="box" placeholder="enter your password" name="password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="../colorlib-regform-4/indexmyedit.html">register now</a></p>
+    </form>
+
+</div>
+
+<script>  
+    function validation()  
+    {  
+        var id=document.f1.user.value;  
+        var ps=document.f1.pass.value;  
+        if(id.length=="" && ps.length=="") {  
+            alert("User Name and Password fields are empty");  
+            return false;  
+        }  
+        else  
+        {  
+            if(id.length=="") {  
+                alert("User Name is empty");  
+                return false;  
+            }   
+            if (ps.length=="") {  
+            alert("Password field is empty");  
+            return false;  
+            }  
+        }                             
+    }  
+    </script>
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>adventure is worthwhile</h3>
+        <p>dicover new places with us, adventure awaits</p>
+        <a href="#" class="btn">discover more</a>
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+
+
+
+
+
+<!-- gallery section starts  -->
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/g-1.jpg" alt="">
+            <div class="content">
+                <h3>amazing train ride</h3>
+                <p>The Kandy to Ella train journey is said to be one of the  epic train journey the world.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-2.png" alt="">
+            <div class="content">
+                <h3>amazing towers</h3>
+                <p>If you’ve got a head for heights, how about visiting one of the best tower of sri-lanka?</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-3.jpg" alt="">
+            <div class="content">
+                <h3>amazing beach side</h3>
+                <p>a place to sunbathe, swim, read and dream, but also a place of adventure and intrigue, of beginnings and endings</p>
+   
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing Rope swing </h3>
+                <p>There are plenty of places around the world that have become viral travel hotspots overnight.this is the one.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-5.png" alt="">
+            <div class="content">
+                <h3>amazing temple</h3>
+                <p>Spread out all across the sri-lanka, these temples have redefined travel and brought home visitors</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-6.jpg" alt="">
+            <div class="content">
+                <h3>amazing Surf at Hikkaduwa</h3>
+                <p>The south coast of Sri Lanka is a surfers paradise.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-7.jpg" alt="">
+            <div class="content">
+                <h3>amazin waterfall</h3>
+                <p>One of Mother Nature's most soothing yet exhilarating and beautiful creations in the world is the waterfall.</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-8.jpg" alt="">
+            <div class="content">
+                <h3>amazing tour with three-wheel</h3>
+                <p>The tuktuk is a unique cultural beast in Sri-lanka</p>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-9.jpg" alt="">
+            <div class="content">
+                <h3>amazing Tattoo</h3>
+                <p>Getting a tattoo in a developing country is always an interesting experience.</p>
+                
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- gallery section ends -->
+
+
+
+
+<!-- offers section starts  -->
+
+<section class="offers" id="offers">
+
+    <h1 class="heading">
+        <span>o</span>
+        <span>f</span>
+        <span>f</span>
+        <span>e</span>
+        <span>r</span>
+        <span>s</span>
+        
+    </h1>
+
+    <!-- special section html start -->
+    <div class="special-section">
+        <div class="container">
+           <div class="special-inner">
+              <div class="row">
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img1.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>20%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">BEACH-SIDE</a>
+                          </div>
+                          <h3>
+                             <a href="#">Honeymoon Special Packages in Srilanka!</a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1500</del>
+                             <ins>$1200</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img2.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>15%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">HAMBANTOTA</a>
+                          </div>
+                          <h3>
+                             <a href="#">Yala Wildlife Special</a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1300</del>
+                             <ins>$1105</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img3.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>15%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">NUWARA-ELIYA,ELLA</a>
+                          </div>
+                          <h3>
+                             <a href="#">Ramayana Tours in Sri Lanka</a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1800</del>
+                             <ins>$1476</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img4.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>15%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">KANDY</a>
+                          </div>
+                          <h3>
+                             <a href="#">Sri Lanka with Kandy - With Flights</a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1200</del>
+                             <ins>$1068</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img5.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>15%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">COLOMBO</a>
+                          </div>
+                          <h3>
+                             <a href="#">Luxury Getaway to Colombo with Stay at the Taj</a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1099</del>
+                             <ins>$956</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6 col-lg-4">
+                    <div class="special-item">
+                       <figure class="special-img">
+                          <img src="assets/images/img6.jpg" alt="">
+                       </figure>
+                       <div class="badge-dis">
+                          <span>
+                             <strong>15%</strong>
+                             off
+                          </span>
+                       </div>
+                       <div class="special-content">
+                          <div class="meta-cat">
+                             <a href="#">DAMBULLA</a>
+                          </div>
+                          <h3>
+                             <a href="#">Balloon Ride Tour </a>
+                          </h3>
+                          <div class="package-price">
+                             Price:
+                             <del>$1300</del>
+                             <ins>$1079</ins>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!-- special html end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- packages section starts  -->
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="images/p-1.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> sigiriya </h3>
+                <p>Sigiriya is an ancient rock fortress and place built by King Kashyapa during the region of 473-495. It is said to be the eight wonders of the world. Sigiria is famous for the paintings and its place ruins on top of a massive 200-meter-high rock surrounded by the remains of an extensive network of gardens, reservoirs and other structures. It is the fine example of ancient urban planning and the site also known as LionRock. It is located in the Northern Matale district near the town of Dambulla in Central Province of Sri Lanka Referred by locals as the Eighth Wonder of the World this ancient palace and fortress complex has significant archaeological importance and attracts thousands of tourists every year. It is probably the most visited tourist destination of Sri Lanka.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $90.00 <span>$150.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> mirissa whales watching </h3>
+                <p>Whale and dolphin watching in mirissa is one of the most exciting water activities that can do during the holiday tour in Sri Lanka. Mirissa catching the hearts of Whale watchers. Best season for whale watching in Mirissa is from November to April. There is 98% of chance spotting whales during this period. Most commonly can spot the blue whales. Also, can get lucky to spot sperm whales, humpback whales and Bryde’s whale. Mirissa is located on the southern tip of Sri Lanka </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $50.00 <span>$120.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> yala national park </h3>
+                <p>Yala National Park is the most visited and second largest national park in Sri Lanka, bordering the Indian Ocean. Yala was designated a wildlife sanctuary in 1900 and was designated a national park in 1938. The park is best known for its variety of wild animals. It is important for the conservation of Sri Lankan elephants, Sri Lankan leopards and aquatic birds. The park is worth visiting at all times of the year, however visiting Yala during December to April is recommended. Can explore the park with a Safari tour. Yala is home for 44 varieties of mammal and 215 bird species. Yala is situated in the southeast region of Sri Lanka and lies in Southern Province and Uva Province.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $60.00 <span>$110.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> temple of tooth </h3>
+                <p>Temple of the Sacred Tooth Relic is commonly known as the Sri Dalada Maligawa. It was built in the year 1595 during the region of King Vimaladarmasuriya. It is located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha.  The temple of the tooth is a World Heritage Site mainly due to the temple and the relic. It is a place of great historic, cultural and spiritual significance, a place to visit but also experience. It is located in Kandy town, Central province, Sri Lanka.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $100.00 <span>$180.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> galle fort </h3>
+                <p>Galle is the best example of a fortified city built by the Portuguese in Southeast Asia, showing the interaction between Portuguese architectural styles and native traditions. The fort, like most of the forts in Sri Lanka, is built on a small rocky peninsula, belonging to the sea as much as to the land. The fort is a vast monument, and within its walls, you’ll find a selection of fascinating museums and beautiful churches. Galle fort is in Galle, which is located at the extreme southwest corner of the island, in the southwest coast of Sri Lanka, where the shoreline turns east towards Matara and Tangalle.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $150.00 <span>$190.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> ella </h3>
+                <p>Ella is a small village in the highlands of Sri Lanka which is filled with tea estates, mountains, waterfalls and of course with some good air to breath. It is a dream place for many trekkers with some of the best hikes the island provides. Ella is most popular for its picturesque views and serene atmosphere.
+                    Things to do
+                    <p>1.	Train Tours.</p>
+                    <p>2.	A dip in Diyaluma Falls.</p>
+                    <p>3.	Hiking to Little Adam’s Peak.</p>
+                    <p>4.	Cookery Classes in Ella.</p>
+                    <p>5.	Touring the Tea Plantations.</p>
+                    <p>6.	Sightseeing.</p>
+                   
+                    
+
+                </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> $180.00 <span>$220.00</span> </div>
+                <a href="#" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<
+
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>affordable hotels</h3>
+            <p>Ever thought of experiencing a life of adventure, constantly on the move to meet new people, taste new flavours and a warm comfy room to rest your mind and body at a fraction of cost.
+
+                Then say hello to Hotels in Sri-Lanka</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Is it like Indian food?" That's the first question most people ask about Sri Lankan cuisine—if they know how great of food in tiny island they will never regret.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>safty guide</h3>
+            <p>Get vaccinated for COVID a minimum of 2 weeks before you arrive in Sri Lanka.then yes, you will definitly safe here.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the sri-lanka</h3>
+            <p>Sri Lanka, referred to as “The Wonder of Asia”, truly is a paradise for sightseers, nature lovers, wildlife enthusiasts and adventurers.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>fastest travel</h3>
+            <p>Sri Lanka is a quite small country/ island where the distances between the sights are relatively short, making it an easy country to travel in.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>adventures</h3>
+            <p>When people think of Sri Lanka, beaches, temples, and historical monuments are what comes to the mind. However, you can also plan for Sri Lanka adventure holidays by including these best adventure places to visit in Sri Lanka in your itinerary.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">
+        <span>r</span>
+        <span>e</span>
+        <span>v</span>
+        <span>i</span>
+        <span>e</span>
+        <span>w</span>
+    </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic1.png" alt="">
+                    <h3>Linda Wickman</h3>
+                    <p>Great experience - Brilliant tour of Sri Lanka, taking in national parks, UNESCO treasures, tea plantation and packing/sorting factory, mountain climbing, ocean picnic, boat, superbly organised by guide Manoj - oh and wonderful hotels!</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic2.png" alt="">
+                    <h3>Liz Germain </h3>
+                    <p>Tour guide was fantastic. He went out of his way to make sure everyone was happy and had what they needed. He was very informative and interesting. He was accomdating and made sure everyone was informed and comfortable with the elephant orphanage decision.
+
+                        Highlights of the tour were the safaris, sigiriya, and polonnaruwa.</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic3.png" alt="">
+                    <h3>Recep Aydin</h3>
+                    <p>Has been absolutely an amazing trip. Everything has been superb from day one till last day ,selections of the hotel tour itinerary and comfortable AC bus was amazing </p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box">
+                    <img src="images/pic4.png" alt="">
+                    <h3>Kenneth Driver </h3>
+                    <p>A wonderful tour a wonderful country.We loved the tour. Manoj the guide was exceptional . He was very well organised and careful to manage them group dynamic sensitively . Our group was 16 people and was a good balance of ages from 20 to 60 . The tour we did was a great balance of history, visiting local people and seeing the country and wildlife. The hotels were all excellent . Security had been stepped up in Sri Lanka since the bombings and we felt very safe .</p>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- review section ends -->
+
+
+
+
+
+
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+    
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/contact-img.svg" alt="">
+        </div>
+
+        <form action="">
+            <div class="inputBox">
+                <input type="text" placeholder="name">
+                <input type="email" placeholder="email">
+            </div>
+            <div class="inputBox">
+                <input type="number" placeholder="number">
+                <input type="text" placeholder="subject">
+            </div>
+            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
+            <input type="submit" class="btn" value="send message">
+        </form>
+
+    </div>
+    
+</section>
+
+<!-- contact section ends -->
+
+<!-- brand section  -->
+<section class="brand-container">
+
+    <div class="swiper-container brand-slider">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="images/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/5.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="images/6.jpg" alt=""></div>
+        </div>
+    </div>
+
+</section>
+
+<!-- footer section  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quas magni pariatur est accusantium voluptas enim nemo facilis sit debitis.</p>
+        </div>
+
+        
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#">home</a>
+            <a href="#">gallery</a>
+            <a href="#">Offers</a>
+            <a href="#">packages</a>
+            <a href="#">services</a>
+            <a href="#">review</a>
+            <a href="#">contact</a>
+        </div>
+        
+    </div>
+
+    <h1 class="credit"> | all rights reserved! </h1>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
