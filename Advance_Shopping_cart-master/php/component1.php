@@ -1,19 +1,22 @@
-<?php  
-function component1(){
-    $element="<div class="col-lg-4 col-md-6">
+<?php
+
+ function component1(){
+    $element = "
     
-    <form action="tour-guide edit.php" method="post">
-    <div class="package-wrap">
-       <div class="package-price">
-          <h6>
-             <span>$150 </span> / per day
-          </h6>
-       </div>
-    </div>
+ <div class="col-lg-4 col-md-6">
+    <form action= "tour-guide edit.php" method= "post">
+       
+          <div class="package-wrap">
+              <div class="package-price">
+                    <h6>
+                         <span>$150 </span> / per day
+                    </h6>
+             </div>
+         </div>
        <div class="guide-content-wrap text-center">
        
            <figure class="guide-image">
-               <img src="assets/images/TG 1.jpg" alt="">
+               <img src="../../latest travele/assets/images/TG 1.jpg" alt="">
            </figure>
        
            <div class="guide-content">
@@ -31,18 +34,20 @@ function component1(){
                </div>
           
         <!-- <div class="form-group submit-btn"></div>
-          <input type="submit" name="submit" value="Book Now"> </div>  -->
+          <input type="submit" name="submit" value="Book Now"> </div>--> 
              <br>
           <div class="form-group submit-btn ">
-             <a href="#" class="button-primary ">Add to Cart</a>
+             <a href="#" class="button-primary ">Book Now</a>
           </div>
 
        </div>
        
            </div>
  
+ </form>        
    </div>
-    
-    "
-    echo $element;  
-}
+    ";
+    echo $element;
+ }
+
+?>
