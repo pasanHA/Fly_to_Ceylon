@@ -1,5 +1,5 @@
 <?php
-require_once('./Advance_Shopping_cart-master/php/component1.php');
+require_once('../Advance_Shopping_cart-master/php/component1.php');
 
 ?>
 
@@ -366,6 +366,9 @@ require_once('./Advance_Shopping_cart-master/php/component1.php');
                <div class="container">
                	<div class="row">
                		<?php 
+                     component1();
+                     component1();
+                     component1();
                      component1();
                      ?>
                	</div>
