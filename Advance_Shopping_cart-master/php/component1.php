@@ -4,7 +4,7 @@
     $element = "
     
  <div class="col-lg-4 col-md-6">
-    <form action= "tour-guide edit.php" method= "post">
+    <form action= "../../latest travele/tour-guide edit.php" method= "post">
        
           <div class="package-wrap">
               <div class="package-price">
@@ -50,4 +50,3 @@
     echo $element;
  }
 
-?>
