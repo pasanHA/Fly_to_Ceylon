@@ -8758,5 +8758,9 @@ product checkout css
     margin-top: 50px;
   }
 }
-
+#cart_count{
+  text-align: center;
+  padding: 0 0.9rem 0.1rem 0.9rem;
+  border-radius: 3rem;
+}
 /*# sourceMappingURL=style.css.map */

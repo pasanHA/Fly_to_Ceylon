@@ -1,6 +1,6 @@
 <?php
 
- function component1(){
+ function component1($name,$discription,$image,$Gid){
     $element = "
     
   <div class=\"col-lg-4 col-md-6\">
@@ -16,13 +16,13 @@
        <div class=\"guide-content-wrap text-center\">
        
            <figure class=\"guide-image\">
-               <img src=\"./upload/product1.png\" alt=\" \">
+               <img src=\"$image\" alt=\" \">
            </figure>
        
            <div class=\"guide-content\">
-               <h3>Sunil Jayasena</h3>
+               <h3>$name</h3>
                <h5>Tour Guide</h5>
-               <p>Mr. Sunil Jayasena is one of best tour guide in Sri Lanka with 20year experience. He is flurent in EnHe also speak german, japan and russian languages well.</p>
+               <p>$discription</p>
                <div class=\"guide-social social-links\">
                    <ul>
                   <li><a href=\"#\"><i class=\"fab fa-facebook-f\" aria-hidden=\"true\"></i></a></li>
@@ -34,16 +34,18 @@
                </div>
           
         <!-- <div class=\"form-group submit-btn\"></div>
-          <input type=\"submit\" name=\"submit\" value=\"Book Now\"> </div>--> 
+          <input type=\"submit\" name=\"submit\" value=\"\"> </div>--> 
              <br>
-          <div class=\"form-group submit-btn \">
-             <a href=\"#\" class=\"button-primary \">Book Now</a>
-          </div>
-
+             <button type=\"submit\" class=\"button-primary \" name=\"add\">Book Now <i class=\"fas fa-shopping-cart\"></i></button>
+             <input type='hidden' name='Guideid' value='$Gid'>
+             <!-- <div class=\"form-group submit-btn \">
+              <a href=\"#\" class=\"button-primary \">Book Now</a> 
+           </div>-->
+           <!--  btn btn-warning my-3 --> 
        </div>
        
            </div>
- 
+
  </form>        
    </div>
     ";
