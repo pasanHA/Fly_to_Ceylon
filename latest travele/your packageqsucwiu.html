@@ -52,34 +52,54 @@ $result=mysqli_query($con,$query);
                 <h6>My Cart</h6>
                 <hr>
 
-                 <?php
+                <?php
 
                //  $total = 0;
-                  //   if (isset($_SESSION['cart'])){
+                    if (isset($_SESSION['cart'])){
                         $product_id = array_column($_SESSION['cart'], 'Guideid');
 
-                        // $result = $db->getData();
+                        $result = $db->getData();
                         while ($row = mysqli_fetch_assoc($result)){
-                            foreach ($product_id as $Guide_id){
+                            foreach ($Guideid as $Guide_id){
                                 if ($row['Guide_id'] == $Guide_id){
-                                    cartElement($row['Guide_image'], $row['Guide_name'],$row['Guide_discr']);
+                                    cartElement($row['gimg'], $row['gname'],$row['gdis'], $row['id']);
                                     // $total = $total + (int)$row['product_price'];
                                 }
                             }
                         }
-                  //   }else{
-                  //       echo "<h5>Cart is Empty</h5>";
-                  //   }
+                    }else{
+                        echo "<h5>Cart is Empty</h5>";
+                    }
 
-                ?> 
+                ?>
+<!-- 
+                <?php
 
+                $total = 0;
+                    if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'product_id');
+
+                        $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result)){
+                            foreach ($product_id as $id){
+                                if ($row['id'] == $id){
+                                    cartElement($row['product_image'], $row['product_name'],$row['product_price'], $row['id']);
+                                    $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                    }else{
+                        echo "<h5>Cart is Empty</h5>";
+                    }
+
+                ?> -->
 
             </div>
         </div>
           
          <main id="content" class="site-main">
             <!-- Inner Banner html start-->
-            <!-- <section class="inner-banner-wrap">
+            <section class="inner-banner-wrap">
                <div class="inner-baner-container" style="background-image: url(assets/images/v\ place\ cover.jpg);">
                   <div class="container">
                      <div class="inner-banner-content">
@@ -88,7 +108,7 @@ $result=mysqli_query($con,$query);
                   </div>
                </div>
                <div class="inner-shape"></div>
-            </section> -->
+            </section>
             <!-- Inner Banner html end-->
             <!-- packages html start -->
             <div id="place">
@@ -149,7 +169,7 @@ $result=mysqli_query($con,$query);
                         </h2>
          
                               
-                                  <!-- <div class="col-lg-4 col-md-6">
+                                  <div class="col-lg-4 col-md-6">
                                     <div class="package-wrap">
                                        <figure class="feature-image">
                                           <a href="#">
@@ -202,7 +222,7 @@ $result=mysqli_query($con,$query);
                                        </div>
                                     </div>
                                  </div>
-                                 --> -->
+                                 -->
                      </section>
                      </div>
 
