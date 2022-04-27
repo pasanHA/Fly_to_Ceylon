@@ -5,6 +5,9 @@ include_once('./php/connection.php');
 $query="select * from guide"; 
 $result=mysqli_query($con,$query);
 
+$query="select * from transportation"; 
+$result2=mysqli_query($con,$query);
+
 
 ?>
 
@@ -63,6 +66,34 @@ $result=mysqli_query($con,$query);
                             foreach ($product_id as $Guide_id){
                                 if ($row['Guide_id'] == $Guide_id){
                                     cartElement($row['Guide_image'], $row['Guide_name'],$row['Guide_discr']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+
+            <div class="shopping-cart">
+                <h6>My Cart2</h6>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result2)){
+                            foreach ($product_id as $vehi_id){
+                                if ($row['vehi_id'] == $vehi_id){
+                                    cartElement($row['vehi_image'], $row['Vehicle_type'],$row['vehi_disc']);
                                     // $total = $total + (int)$row['product_price'];
                                 }
                             }

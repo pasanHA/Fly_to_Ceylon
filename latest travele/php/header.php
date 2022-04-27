@@ -69,7 +69,7 @@
                             <ul>
     
                               <li class="menu-item-has-children">
-                                 <a href="index.html">Home</a>
+                                 <a href="index.php">Home</a>
                                  </li>
                                <!--
                                <li class="menu-item-has-children">
@@ -106,7 +106,7 @@
                                        <!-- <a href="Transportation.html">Transportation</a>
                                        <ul> -->
                                           <li>
-                                             <a href="Transportation.html">Transportation</a>
+                                             <a href="Transportation.php">Transportation</a>
                                           </li>
                                           <!-- <li>
                                              <a href="Airlines.html">Airlines</a>
