@@ -7,10 +7,10 @@ if(isset($_GET['submit']))
 $price=$_GET['price'];
 $tele=$_GET['tele'];
 $days=$_GET['days'];
-$rank=$_GET['rank']
+$rank=$_GET['rank'];
 
-$query="INSERT INTO hotel (Vehicle_type,Price_per_1km,Telephone)
-VALUES('$vehicle','$price','$tele')
+$query="INSERT INTO hotel(Hotel_Name,Hotel_rank,Telephone,Discription,Rate_per_person_per_day,Number_of_days)
+VALUES('{$hotel}','{$rank}','{$tele}','{$description}','{$price}','{$days}')
  LIMIT 1";
 
 if ($result=mysqli_query($connect,$query)) {
