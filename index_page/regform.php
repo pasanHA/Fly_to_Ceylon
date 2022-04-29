@@ -1,10 +1,13 @@
 <?php      
-    include('connection.php');  
+    include('connectionfinaldb.php');  
     $email = $_POST['email'];  
     $password = $_POST['password'];
     $fname = $_POST['first_name'];  
     $lname = $_POST['last_name'];  
-    //$gender = $_POST['gender'];  
+    $gender = $_POST['gender']; 
+    
+    // if(isset($_POST)['save'])
+    //     $gender = $_POST['gender']; 
     $confpass = $_POST['confpass'];  
     $country = $_POST['country'];  
     $tel = $_POST['phone'];    
@@ -20,9 +23,9 @@
         $fname = mysqli_real_escape_string($con, $fname);  
         $lname = mysqli_real_escape_string($con, $lname); 
 
-        //$gender = stripcslashes($gender);  
+        $gender = stripcslashes($gender);  
         $confpass = stripcslashes($confpass);  
-        //$gender = mysqli_real_escape_string($con, $gender);  
+        $gender = mysqli_real_escape_string($con, $gender);  
         $confpass = mysqli_real_escape_string($con, $confpass);
 
         $country = stripcslashes($country);  
@@ -32,11 +35,10 @@
 
         
       
-        $sql = "INSERT INTO traveller (Password,Frist_Name,Last_Name,Email,Telephone,Country) VALUES ('$password','$fname','$lname','$email',' $tel','$country')";  
+        $sql = "INSERT INTO traveller (  Password,First_Name,Last_Name,Email,Telephone,Country,Gender) 
+                             VALUES ('$password','$fname','$lname','$email',' $tel','$country','$gender' )";  
          $result = mysqli_query($con, $sql); 
-        // if(mysqli_query($con,$sql)) 
-        // $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        // $count = mysqli_num_rows($result);  
+    
           
         if($result){  
             echo "<h1><center> Register Added successful </center></h1>";  
@@ -45,3 +47,5 @@
             echo "<h1> error.</h1>";  
         }     
 ?>  
+<!-- Password,First_Name,Last_Name,Email,Telephone,Country,Gender
+'$password','$fname','$lname','$email',' $tel','$country','$gender' -->

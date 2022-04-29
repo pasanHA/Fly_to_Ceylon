@@ -51,7 +51,7 @@
                 <ul>
 
                    <li class="menu-item-has-children">
-                      <a href="index.php">Home</a>
+                      <a href="index.html">Home</a>
                       </li>
                    <!--
                    <li class="menu-item-has-children">
@@ -75,10 +75,10 @@
                             <a href="gallery.html">Gallery</a>
                          </li> -->
                          <li>
-                            <a href="hotel sri lanka.php">Hotels</a>
+                            <a href="hotel sri lanka.html">Hotels</a>
                          </li>
                          <li>
-                            <a href="tour-guide edit.php">Travel Guides</a>
+                            <a href="tour-guide edit.html">Travel Guides</a>
                          </li>
                          <!-- <li>
                             <a href="gallery.html">Back an Airport</a>
@@ -88,7 +88,7 @@
                             <!-- <a href="Transportation.html">Transportation</a>
                             <ul> -->
                                <li>
-                                  <a href="Transportation.php">Transportation</a>
+                                  <a href="Transportation.html">Transportation</a>
                                </li>
                                <!-- <li>
                                   <a href="Airlines.html">Airlines</a>
@@ -110,11 +110,11 @@
                             <a href="tour-packages.html">Tour Packages</a>
                          </li>
                          <li>
-                            <a href="your package.php">Your Package</a>
+                            <a href="your package.html">Your Package</a>
                          </li>
                          <li>
                             <a href="package-offer.html">Package Offer</a>
-                         </li>2
+                         </li>
 
 
                          <!--
@@ -245,7 +245,7 @@
                                   <a href="tour-cart.html">Your Cart</a>
                                </li>
                                <li>
-                                  <a href="your package.php">Your Package</a>
+                                  <a href="your package.html">Your Package</a>
                                </li>
                                <li>
                                   <a href="admin/db-package-expired.html">Your Wishlist</a>
@@ -261,11 +261,12 @@
                          </li>
 
                          <li>
-                            <a href="your package.php">Your Package</a>
+                            <a href="your package.html">Your Package</a>
                          </li>
                          <li>
                             <a href="Review-page.html">Reviews</a>
                          </li>
+
 
                          <!--
                          <li class="menu-item-has-children">
