@@ -27,12 +27,13 @@
                 </div>
                 <div class="heaer-content-right pull-right">
                     <div class="search-field">
-                        <form>
+                        <!--<form>-->
+                            <form action="Add destination.php" method="post">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="search" placeholder="Search Now">
+                                <input type="text" class="form-control" id="search" placeholder="Search Now" name="search">
                                 <a href="#"><span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                             </div>
-                        </form>
+                        <!--</form>-->
                     </div>
                     <div class="dropdown">
                         <a class="dropdown-toggle" id="notifyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -158,6 +159,7 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="db-info-wrap db-add-tour-wrap">
                 <div class="row">
                     <!-- Listings -->
@@ -166,11 +168,12 @@
                             <div class="custom-field-wrap">
                                 <div class="form-group">
                                     <label>Title</label>
-                                    <input type="text" name="name">
+                                    <input type="text" name="destination">
                                 </div>
                                 <div class="form-group">
                                     <label>Description</label>
-                                    <textarea></textarea>
+                                  <!--  <textarea name="discription"></textarea>-->
+                                  <input type="text" name="discription">
                                 </div>
                             </div>
                         </div>
@@ -184,7 +187,7 @@
                                         <div class="upload-input">
                                             <div class="form-group">
                                               <span class="upload-btn">Upload a image</span>
-                                              <input type="file" name="myfile">
+                                             <!-- <input type="file" name="image">-->
                                             </div>
                                         </div>
                                     </div>
@@ -197,16 +200,19 @@
                                 <div class="row">
                                   <div class="col-sm-6">
                                         <div class="form-group">
-                                            <label>Select Map</label>
-                                            <select>
-                                                <option>Google Map</option>
-                                            </select>
+                                            <label>City</label>
+                                            <input type="text" name="city">
+                                            
                                         </div>
                                     </div>
 </div>
                             </div>
                         </div>
+                        <br>
+                                            <br>
+                                            <button type="submit" class="button-primary" name="submit">Submit</button>
                     </div>
+                </form>
 </div>      
             </div>
           <!-- Content / End -->

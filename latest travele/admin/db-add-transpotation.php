@@ -1,26 +1,51 @@
+<?php
+require_once('connection.php');
+if(isset($_GET['submit']))
+{
+ $vehicle=$_GET['vehicle'];
+// $description=$_GET['discription'];
+$price=$_GET['price'];
+$tele=$_GET['tele'];
+// $additional=$_GET['additional'];
+
+$query="INSERT INTO transportation (Vehicle_type,Price_per_1km,Telephone)
+VALUES('$vehicle','$price','$tele')
+ LIMIT 1";
+
+if ($result=mysqli_query($connect,$query)) {
+    if ($result==1){
+     header('Location: success.php');
+    }
+ }
+}
+
+?>
 <!doctype html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-      <!-- favicon -->
-      <link rel="icon" type="image/png" href="../assets/images/favicon.png">
-      <!-- Bootstrap CSS -->
-      <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all">
-      <!-- Fonts Awesome CSS -->
-      <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
-      <!-- google fonts -->
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
-      <!-- Custom CSS -->
-      <link rel="stylesheet" type="text/css" href="style.css">
-      <title>Travele | Travel & Tour HTML5 template </title>
+
+<head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="all">
+    <!-- Fonts Awesome CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/all.min.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Travele | Travel & Tour HTML5 template </title>
 </head>
+
 <body>
     <!-- start Container Wrapper -->
     <div id="container-wrapper">
         <!-- Dashboard -->
-      <div id="dashboard" class="dashboard-container">
+        <div id="dashboard" class="dashboard-container">
             <div class="dashboard-header sticky-header">
                 <div class="content-left  logo-section pull-left">
                     <h1><a href="../index.html"><img src="assets/images/logo.png" alt=""></a></h1>
@@ -28,16 +53,15 @@
                 <div class="heaer-content-right pull-right">
                     <div class="search-field">
                         <form>
-                            <form action="Add hotel.php" method="post">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="search" placeholder="Search Now">
                                 <a href="#"><span class="search_btn"><i class="fa fa-search" aria-hidden="true"></i></span></a>
                             </div>
-                        
+
                     </div>
                     <div class="dropdown">
                         <a class="dropdown-toggle" id="notifyDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           
+
                         </a>
                         <div class="dropdown-menu notification-menu" aria-labelledby="notifyDropdown">
                             <h4> 3 Notifications</h4>
@@ -81,7 +105,7 @@
                     </div>
                     <div class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown">
-                            
+
                         </a>
                         <div class="dropdown-menu notification-menu">
                             <h4> 3 Messages</h4>
@@ -142,125 +166,84 @@
                     </div>
                 </div>
             </div>
-        <div class="dashboard-navigation">
+            <div class="dashboard-navigation">
                 <!-- Responsive Navigation Trigger -->
-                        <div id="dashboard-Navigation" class="slick-nav"></div>
+                <div id="dashboard-Navigation" class="slick-nav"></div>
                 <div id="navigation" class="navigation-container">
                     <ul>
-                        
-                        
-						<li><a href="admin.html"><i class="fas fa-user"></i>Admin</a></li>
+
+
+                        <li><a href="admin.html"><i class="fas fa-user"></i>Admin</a></li>
                         <li><a href="db-add-package.html"><i class="fas fa-umbrella-beach"></i>Add Package</a></li>
-						<li><a href="db-add-hotel.html"><i class="fas fa-umbrella-beach"></i>Add Hotel</a></li>
-						<li><a href="db-add-airline.html"><i class="fas fa-umbrella-beach"></i>Add Airline</a></li>
-						<li><a href="db-add-transpotation.html"><i class="fas fa-umbrella-beach"></i>Add Transpotation</a></li>
-						<li><a href="db-add-destination.html"><i class="fas fa-umbrella-beach"></i>Add Destination</a></li>
+                        <li><a href="db-add-hotel.html"><i class="fas fa-umbrella-beach"></i>Add Hotel</a></li>
+                        <li><a href="db-add-airline.html"><i class="fas fa-umbrella-beach"></i>Add Airline</a></li>
+                        <li><a href="db-add-transpotation.html"><i class="fas fa-umbrella-beach"></i>Add Transpotation</a></li>
+                        <li><a href="db-add-destination.html"><i class="fas fa-umbrella-beach"></i>Add Destination</a></li>
                         <li><a href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="db-info-wrap db-add-tour-wrap">
-                <div class="row">
-                    <!-- Listings -->
-                    <div class="col-lg-8 col-xl-12">
-                        <div class="dashboard-box">
-                            <div class="custom-field-wrap">
-                                <div class="form-group">
-                                    <label>Title</label>
-                                    <input type="text" name="hotel">
-                                </div>
-                                <div class="form-group">
-                                    <label>Discription</label>
-                                    <input type="text" name="discription">
-                                </div>
-                                <div class="form-group">
-                                    <label>Hotel Rank</label>
-                                    <input type="text" name="rank">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dashboard-box">
-                            <div class="custom-field-wrap">
-                                <h4>Prices</h4>
-                                <div class="row">
-<div class="col-sm-3">
-                    <div class="form-group">
-                                            <label>Regular Price</label>
-                                            <input type="text" name="price">
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-2">
-                                        <div class="form-group">
-                                            <label>Discount</label>
-                                            <input type="text" name="discount">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dashboard-box">
-                            <h4>Gallery</h4>
-                            <div class="custom-field-wrap">
-                                <div class="dragable-field">
-                                    <div class="dragable-field-inner">
-                                        <p class="drag-drop-info">Drop Files To Upload</p>
-                                        <p>or</p>
-                                        <div class="upload-input">
-                                            <div class="form-group">
-                                              <span class="upload-btn">Upload a image</span>
-                                              <input type="file" name="myfile">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dashboard-box">
-                            <h4>Location</h4>
-                            <div class="custom-field-wrap">
-                                <div class="row">
-                                  <div class="col-sm-6">
-                                        <div class="form-group">
-                                            <label>Select location</label>
-                                            <input type="text" name="location">
-                                            <br>
-                                            <label>City</label>
-                                            <input type="text" name="city">
-                                            <br>
-                                            <br>
-                                           
-                                        </div>
-                                        
-                                    </div>
-</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dashboard-box">
-                        <h4>Telephone</h4>
-                        <div class="custom-field-wrap">
-                            <div class="row">
-                              <div class="col-sm-6">
+
+            <!--================form=============================-->
+
+            <form action=<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?> method="POST" enctype="application/x-www-form-urlencoded">
+                <div class="db-info-wrap db-add-tour-wrap">
+                    <div class="row">
+                        <!-- Listings -->
+                        <div class="col-lg-8 col-xl-12">
+                            <div class="dashboard-box">
+                                <div class="custom-field-wrap">
                                     <div class="form-group">
-                                        <label>Add telephone</label>
-                                        <input type="text" name="telephone">
-                                        <br>
-                                        <br>
-                                       
+                                        <label>Vehicle Type</label>
+                                        <input type="text" name="vehicle">
                                     </div>
-                                    
+                                    <div class="form-group">
+                                        <label>Telephone</label>
+                                        <input type="text" name="tele">
+                                    </div>
                                 </div>
-</div>
+                                <div class="dashboard-box">
+                                    <div class="custom-field-wrap">
+                                        <h4>Prices</h4>
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <div class="form-group">
+                                                    <label>Price per 1km</label>
+                                                    <input type="text" name="price">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dashboard-box">
+                                    <h4>Gallery</h4>
+                                    <div class="custom-field-wrap">
+                                        <div class="dragable-field">
+                                            <div class="dragable-field-inner">
+                                                <p class="drag-drop-info">Drop Files To Upload</p>
+                                                <p>or</p>
+                                                <div class="upload-input">
+                                                    <div class="form-group">
+                                                        <span class="upload-btn">Upload a image</span>
+                                                        <input type="file" name="myfile">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <br>
+                                            <input type="submit" class="button-primary" name="submit" value="submit">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" class="button-primary" name="submit">Submit</button>
-                </form>
-                
-      
-            </div>
-          <!-- Content / End -->
-          <!-- Copyrights -->
+            </form>
+            <!-- Content / End -->
+            <!-- Copyrights -->
         </div>
+
         <!-- Dashboard / End -->
     </div>
     <!-- end Container Wrapper -->
@@ -275,4 +258,5 @@
 </body>
 
 <!-- Mirrored from cyclonethemes.com/demo/html/padhai/dashboard-addtour.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 02 Feb 2020 09:01:50 GMT -->
+
 </html>

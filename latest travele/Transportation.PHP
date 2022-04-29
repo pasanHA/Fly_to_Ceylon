@@ -295,7 +295,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img5.jpg" alt="">
+                                    <img src="assets/images/img55.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
@@ -340,7 +340,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img6.jpg" alt="">
+                                    <img src="assets/images/img66.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
@@ -385,7 +385,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img7.jpg" alt="">
+                                    <img src="assets/images/img77.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
@@ -430,7 +430,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img11.jpg" alt="">
+                                    <img src="assets/images/img111.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
@@ -475,7 +475,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img51.jpg" alt="">
+                                    <img src="assets/images/img511.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
@@ -520,7 +520,7 @@
                            <div class="package-wrap">
                               <figure class="feature-image">
                                  <a href="#">
-                                    <img src="assets/images/img52.jpg" alt="">
+                                    <img src="assets/images/img522.jpg" alt="">
                                  </a>
                               </figure>
                               <div class="package-price">
