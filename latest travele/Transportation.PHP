@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once('./php/component1.php');
+require_once('./php/component2.php');
 include_once('./php/connection.php'); 
 $query="select * from transportation"; 
 $result=mysqli_query($con,$query);
@@ -68,9 +68,10 @@ if (isset($_POST['add'])){
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" type="text/css" href="style.css">
-      <title>Fly to CEYLON | About  </title>
+      <title>Fly to CEYLON | Transportation  </title>
    </head>
    <body class="home">
+ 
       <div id="siteLoader" class="site-loader">
          <div class="preloader-content">
             <img src="assets/images/loader1.gif" alt="">
@@ -101,7 +102,7 @@ if (isset($_POST['add'])){
                      <?php 
                      while($row=mysqli_fetch_assoc($result)) 
                      {
-                         component1($row['Vehicle_type'], $row['vehi_disc'], $row['vehi_image'],$row['vehi_id']);
+                         component1($row['Vehicle_type'], $row['vehi_disc'], $row['Image'],$row['vehi_id']);
                      }
                      
                      ?>  

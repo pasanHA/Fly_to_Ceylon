@@ -1,3 +1,46 @@
+<?php
+session_start();
+require_once('./php/comphotels.php');
+include_once('./php/connection.php'); 
+$query="select * from hotel"; 
+$result=mysqli_query($con,$query);
+
+
+
+if (isset($_POST['add'])){
+   print_r($_POST['Guideid']);
+// if (isset($_POST['add'])){
+//    print_r($_POST['Guideid']);}
+ if(isset($_SESSION['cart'])){
+
+     $item_array_id = array_column($_SESSION['cart'], "Guideid");
+
+     if(in_array($_POST['Guideid'], $item_array_id)){
+         echo "<script>alert('Product is already added in the cart..!')</script>";
+         echo "<script>window.location = 'hotel sri lanka.php'</script>";
+     }else{
+
+         $count = count($_SESSION['cart']);
+         $item_array = array(
+             'Guideid' => $_POST['Guideid']
+         );
+
+         $_SESSION['cart'][$count] = $item_array;
+         print_r($_SESSION['cart']);
+     }
+
+ }else{
+
+     $item_array = array(
+             'Guideid' => $_POST['Guideid']
+     );
+
+    // Create new session variable
+     $_SESSION['cart'][0] = $item_array;
+     print_r($_SESSION['cart']);
+ }
+}
+?>
 <!doctype html>
 <html lang="en">
    <head>
@@ -33,7 +76,7 @@
          </div>
       </div>
       <div id="page" class="full-page">
-      <?php require_once ('./php/header_original.php'); ?>
+      <?php require_once ('./php/header.php'); ?>
          <main id="content" class="site-main">
             <!-- Inner Banner html start-->
             <section class="inner-banner-wrap">
@@ -57,7 +100,7 @@
                               <img src="assets/images/sl h 9.jpg" alt="">
                               
                            </figure>
-                           <div class="tab-container">
+                      <div class="tab-container">
                               <ul class="nav nav-tabs" id="myTab" role="tablist">
                                  <li class="nav-item">
                                     <a class="nav-link active" id="overview-tab" data-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">HILTON</a>
@@ -73,71 +116,54 @@
                                  </li>
                               </ul>
 
-                              <div class="tab-content" id="myTabContent">
-                                 <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-                                    
+                            <div class="tab-content" id="myTabContent">
+                               
+                                
                                       
-                                       <div class="itinerary-content"> 
-
-                                          
-                                          <div class="single-gallery grid-item">
-                                             <figure class="gallery-img">
-                                                <img src="assets/images/sl h 2.jpg" alt="">
-                                    
-                                             </figure>
-                                          </div> <br>
-                                          <p>We are in Colombo's business district, connected to the World Trade Centre. Dutch Hospital shopping is less than five minutes away, and we’re under two kilometers from Galle Face Beach. Gangarama Temple is 10 minutes away. Local tuk-tuks are available outside the hotel for exploring the area. Enjoy our outdoor pool, karaoke bar, and on-site restaurants.</p>
-                                    </div>
-                                    <div class="button-container">
-                                       <a href="#" class="button-primary">Book Now</a>
-                                   </div> 
-                                   
-                                   
-                                 </div>
-
-                                 <div class="tab-pane" id="program" role="tabpanel" aria-labelledby="program-tab">
-                                    <div class="itinerary-content">
-                                      
-                                      
-                                          <div class="single-gallery grid-item">
-                                             <figure class="gallery-img">
-                                                <img src="assets/images/sl h 6.jpg" alt="">
-                                    
-                                             </figure>
-                                             <br>
-                                             <p>Welcome to Heritance Hotels and Resorts; an unparalleled portfolio of impeccably designed hotels in destinations rich in heritage, inheritance and natural beauty. From golden beaches to emerald hills, the Heritance experience awaits guests with an eager embrace of warmth and hospitality.</p>
-                                          </div> 
-                                    </div>
-                                    <div class="button-container">
-                                       <a href="#" class="button-primary">Book Now</a>
-                                   </div> 
-                                 </div>
-
-                               <div class="tab-pane" id="review"  role="tabpanel" aria-labelledby="program-tab">
-                                 
-                                 <div class="itinerary-content"> 
-
+                                         <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview-tab">
+                                         <?php
+                                         $row=mysqli_fetch_assoc($result);
+                                         if($row['Hotel_ID']==1){
+                                         componenthotel($row['Image'], $row['Discription'],$row['Hotel_ID']) ;
+                                       }
+                                         ?>
+                                         </div>
                                          
-                                          <div class="single-gallery grid-item">
-                                             <figure class="gallery-img">
-                                                <img src="assets/images/sl h 7.jpg" alt="">
-                                    
-                                             </figure>
-                                          </div> <br>
-                                          <p>Hidden on a rocky outcrop along a secluded stretch of Sri Lanka’s southernmost coastline, Anantara Peace Haven Tangalle Resort boasts the most unique location of any hotel in this beautiful corner of the island. Set amidst a coconut plantation and golden crescent shores with glorious Indian Ocean views, the resort offers a naturally exclusive hideaway for exotic beach life in a tranquil world of your own, as well as living out dreams of adventure with easy access to iconic cultural sites, spectacular national parks and whale watching destinations.</p>
-                                    </div>
-                                    <div class="button-container">
-                                       <a href="#" class="button-primary">Book Now</a>
-                                   </div> 
-                                 </div> 
+                                         
+                                      
+                                         <div class="tab-pane" id="program" role="tabpanel" aria-labelledby="program-tab">
+                                         <?php
+                                          $row=mysqli_fetch_assoc($result);
+                                          if($row['Hotel_ID']==2){ 
+                                         componenthotel($row['Image'], $row['Discription'],$row['Hotel_ID']) ;
+                                           }
+                                           ?>
+                                         </div>
+                                      
+                                         <div class="tab-pane" id="review"  role="tabpanel" aria-labelledby="program-tab">
+                                         
+                                         <?php
+                                          $row=mysqli_fetch_assoc($result);
+                                          if($row['Hotel_ID']==3){ 
+                                         componenthotel($row['Image'], $row['Discription'],$row['Hotel_ID']) ;
+                                           }
+                                           ?>
+                                        
+                                         </div>
+                                     
+                                          
+                                      
+                                   
 
-                                 <div class="tab-pane" id="map" role="tabpanel" aria-labelledby="map-tab">
-                                    <div class="map-area">
-                                       <iframe src="https://maps.google.com/maps?q=sri%20lanka%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed" height="450" allowfullscreen=""></iframe>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
+
+
+                                          <div class="tab-pane" id="map" role="tabpanel" aria-labelledby="map-tab">
+                                           <div class="map-area">
+                                            <iframe src="https://maps.google.com/maps?q=sri%20lanka%20colombo&t=&z=13&ie=UTF8&iwloc=&output=embed" height="450" allowfullscreen=""></iframe>
+                                       </div>
+                                  </div>
+                            </div>
+                        </div>
                            
                            <div class="single-tour-gallery">
                               <h3>GALLERY / PHOTOS</h3>
@@ -167,101 +193,9 @@
                         </div>
                      </div>
 
-                     <div class="col-lg-4">
-                        <div class="sidebar">
-                           <div class="package-price">
-                              <h4 class="price">
-                                 FIND BEST RESIDANCE <br>IN SRI LANKA
-                              </h4>
-                             
-                           </div>
+                     <?php require_once('./php/slider.php');?>
 
-                           <div class="widget-bg booking-form-wrap">
-                              <h4 class="bg-title">Booking Sri Lanka</h4>
                      
-                                    <div class="button-container">
-                                        <a  class="button-primary">Jaffna</a>
-                                    </div> 
-                                    <div class="btn-wrap">
-                                    <a href="jaffna hotels.html" class="button-text width-8">Reserve your hotel<i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <div class="btn-wrap">
-                                    <a href="visiting places.html#jaffna" class="button-text width-8">Find your place<i class="fas fa-arrow-right"></i></a>
-                                    </div>
-                                    <br>
-                                    <br>
-
-                                    <div class="button-container">
-                                       <a  class="button-primary">Trincomalee</a>
-                                   </div> 
-                                   <div class="btn-wrap">
-                                   <a href="trinco hotels.html" class="button-text width-8">Reserve your hotel<i class="fas fa-arrow-right"></i></a>
-                                   </div>
-                                   <div class="btn-wrap">
-                                   <a href="visiting places.html#trincomalee" class="button-text width-8">Find your place<i class="fas fa-arrow-right"></i></a>
-                                   </div>
-                                   <br>
-                                   <br>
-
-
-                                 <div class="button-container">
-                                    <a  class="button-primary">Galle</a>
-                                </div> 
-                                <div class="btn-wrap">
-                                <a href="galle hotels.html" class="button-text width-8">Reserve your hotel<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                                <div class="btn-wrap">
-                                <a href="visiting places.html#galle" class="button-text width-8">Find your place<i class="fas fa-arrow-right"></i></a>
-                                </div>
-                                <br>
-                                <br>
-
-                                <div class="button-container">
-                                 <a class="button-primary">Nuwaraeliya</a>
-                             </div> 
-                             <div class="btn-wrap">
-                             <a href="nuwaraeliya hotels.html" class="button-text width-8">Reserve your hotel<i class="fas fa-arrow-right"></i></a>
-                             </div>
-                             <div class="btn-wrap">
-                             <a href="visiting places.html#nuwaraeliya" class="button-text width-8">Find your place<i class="fas fa-arrow-right"></i></a>
-                             </div>
-                             <br>
-                             <br>
-
-
-                             <div class="button-container">
-                              <a class="button-primary">Yala</a>
-                          </div> 
-                          <div class="btn-wrap">
-                          <a href="yala hotels.html" class="button-text width-8">Reserve your hotel<i class="fas fa-arrow-right"></i></a>
-                          </div>
-                          <div class="btn-wrap">
-                          <a href="visiting places.html#yala" class="button-text width-8">Find your place<i class="fas fa-arrow-right"></i></a>
-                          </div>
-                          <br>
-                          <br>
-
-                           <div class="travel-package-content text-center" style="background-image: url(assets/images/img11.jpg);">
-                             
-                              <h3>OTHER TRAVEL PACKAGES</h3>
-                              <p>Visit Beautiful Sri Lanka....?</p>
-                              <ul>
-                                 <li>
-                                    <a href="Galle.html"><i class="far fa-arrow-alt-circle-right"></i>Amazing Galle</a>
-                                 </li>
-                                 <li>
-                                    <a href="Ella.html"><i class="far fa-arrow-alt-circle-right"></i>Ella Adventure</a>
-                                 </li>
-                                 <li>
-                                    <a href="Mirissa.html"><i class="far fa-arrow-alt-circle-right"></i>Wonderful Mirissa</a>
-                                 </li>
-                                 <li>
-                                    <a href="Dambulla.html"><i class="far fa-arrow-alt-circle-right"></i>Ancient Kingdom Dambulla</a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
                   </div>
                </div>
             </div>

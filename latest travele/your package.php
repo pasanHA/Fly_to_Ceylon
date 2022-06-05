@@ -2,11 +2,36 @@
 session_start();
 require_once('./php/component1.php');
 include_once('./php/connection.php'); 
+require_once('./php/comphotels.php');
+require_once('./php/comphotels2.php');
+require_once('./php/comphotels3.php');
+require_once('./php/comphotels4.php');
+require_once('./php/comphotels5.php');
+require_once('./php/comphotels6.php');
 $query="select * from guide"; 
 $result=mysqli_query($con,$query);
 
 $query="select * from transportation"; 
 $result2=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=90"; 
+$result3=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=91"; 
+$result4=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=92"; 
+$result5=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=93"; 
+$result6=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=94"; 
+$result7=mysqli_query($con,$query);
+
+$query="select * from hotel WHERE City_ID=95"; 
+$result8=mysqli_query($con,$query);
+
 
 
 ?>
@@ -50,9 +75,9 @@ $result2=mysqli_query($con,$query);
            <?php require_once ('./php/header2.php'); ?>
            <div class="container-fluid">
     <div class="row px-5">
-        <div class="col-md-7">
+        <div class="col-md-12">
             <div class="shopping-cart">
-                <h6>My Cart</h6>
+                <h3>Tour Guides</h3>
                 <hr>
 
                  <?php
@@ -65,7 +90,7 @@ $result2=mysqli_query($con,$query);
                         while ($row = mysqli_fetch_assoc($result)){
                             foreach ($product_id as $Guide_id){
                                 if ($row['Guide_id'] == $Guide_id){
-                                    cartElement($row['Guide_image'], $row['Guide_name'],$row['Guide_discr']);
+                                    cartElement($row['Guide_image'], $row['Guide_name'],$row['Guide_disr']);
                                     // $total = $total + (int)$row['product_price'];
                                 }
                             }
@@ -80,7 +105,7 @@ $result2=mysqli_query($con,$query);
             </div>
 
             <div class="shopping-cart">
-                <h6>My Cart2</h6>
+                <h3>Transportation</h3>
                 <hr>
 
                  <?php
@@ -93,7 +118,176 @@ $result2=mysqli_query($con,$query);
                         while ($row = mysqli_fetch_assoc($result2)){
                             foreach ($product_id as $vehi_id){
                                 if ($row['vehi_id'] == $vehi_id){
-                                    cartElement($row['vehi_image'], $row['Vehicle_type'],$row['vehi_disc']);
+                                    cartElement($row['Image'], $row['Vehicle_type'],$row['vehi_disc']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+            <div class="shopping-cart">
+                <h3>Hotels</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result3)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement1($row['Image'], $row['Hotel_Name'],$row['Discription']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+            <div class="shopping-cart">
+                <h3>Trinco</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result4)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement2($row['Image'], $row['Hotel_Name'],$row['Discription']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+
+            <div class="shopping-cart">
+                <h3>Galle</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result5)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement3($row['Image'], $row['Hotel_Name'],$row['Discription']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+
+
+            <div class="shopping-cart">
+                <h3>Nuwara Eliya</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result6)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement4($row['Image'], $row['Hotel_Name'],$row['Discription']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+
+
+            <div class="shopping-cart">
+                <h3>Jaffna</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result7)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement5($row['Image'], $row['Hotel_Name'],$row['Discription']);
+                                    // $total = $total + (int)$row['product_price'];
+                                }
+                            }
+                        }
+                  //   }else{
+                  //       echo "<h5>Cart is Empty</h5>";
+                  //   }
+
+                ?> 
+
+
+            </div>
+
+
+            <div class="shopping-cart">
+                <h3>Yala</h3>
+                <hr>
+
+                 <?php
+
+               //  $total = 0;
+                  //   if (isset($_SESSION['cart'])){
+                        $product_id = array_column($_SESSION['cart'], 'Guideid');
+
+                        // $result = $db->getData();
+                        while ($row = mysqli_fetch_assoc($result8)){
+                            foreach ($product_id as $Hotel_ID){
+                                if ($row['Hotel_ID'] == $Hotel_ID){
+                                    cartElement6($row['Image'], $row['Hotel_Name'],$row['Discription']);
                                     // $total = $total + (int)$row['product_price'];
                                 }
                             }
@@ -122,12 +316,16 @@ $result2=mysqli_query($con,$query);
             </section> -->
             <!-- Inner Banner html end-->
             <!-- packages html start -->
-            <div id="place">
+           
+           
+           
+           
+            <!-- <div id="place">
             <section class="place" style="text-align:center">
                <br>
             <h2> <span>P</span>
                <span>L</span>
-               <span>A</span>
+               <span>Avv</span>
                <span>C</span>
                <span>E</span>
                <span>S</span></h2>
@@ -177,7 +375,7 @@ $result2=mysqli_query($con,$query);
                            <span>E</span>
                            <span>R</span>
                           
-                        </h2>
+                        </h2> -->
          
                               
                                   <!-- <div class="col-lg-4 col-md-6">
@@ -233,7 +431,7 @@ $result2=mysqli_query($con,$query);
                                        </div>
                                     </div>
                                  </div>
-                                 --> -->
+                                 --> 
                      </section>
                      </div>
 

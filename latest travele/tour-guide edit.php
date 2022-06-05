@@ -1,4 +1,4 @@
-<?php
+  <?php
 session_start();
 require_once('./php/component1.php');
 include_once('./php/connection.php'); 
@@ -97,7 +97,7 @@ if (isset($_POST['add'])){
                		<?php 
                      while($row=mysqli_fetch_assoc($result)) 
                      {
-                         component1($row['Guide_name'], $row['Guide_discr'], $row['Guide_image'],$row['Guide_id']);
+                         component1($row['Guide_name'], $row['Guide_disr'], $row['Guide_image'],$row['Guide_id']);
                      }
                      
                      ?>

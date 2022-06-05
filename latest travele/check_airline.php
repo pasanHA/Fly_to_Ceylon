@@ -15,6 +15,11 @@ LIMIT 1";
 $result=mysqli_query($connect,$query);
 }
 
-
+if($result){  
+    echo "<h1><center> Register Added successful </center></h1>";  
+}  
+else{  
+    echo "<h1> error.</h1>";  
+} 
 
 ?>
